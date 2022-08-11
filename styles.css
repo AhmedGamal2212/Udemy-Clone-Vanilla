@@ -27,12 +27,14 @@ nav ul {
 }
 
 .menu-btn,
-.search-btn {
+.search-btn,
+.cart-btn {
     position: relative;
 }
 
 .menu-btn button,
-.search-btn button {
+.search-btn button,
+.cart-btn button {
     display: block;
     text-align: center;
     margin: 0 auto 0 auto;
@@ -40,7 +42,7 @@ nav ul {
     border: none;
     position: absolute;
     top: 30%;
-    left: 30%;
+    left: 25%;
 }
 
 .logo {
