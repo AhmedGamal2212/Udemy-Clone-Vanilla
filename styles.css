@@ -18,11 +18,42 @@ nav ul {
     justify-content: space-between;
 }
 
+.categories-btn,
+.search-bar,
+.login-btn,
+.signup-btn,
+.lang-btn {
+    display: none;
+}
+
+.menu-btn {
+    position: relative;
+}
+
+.menu-btn button {
+    display: block;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    background-color: transparent;
+    border: none;
+}
+
+.menu-btn button {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.logo {
+    flex-grow: 1;
+}
+
 /* tmp style */
 
 li {
-    width: 10px;
+    margin: 1px;
+    width: 10%;
     height: 40px;
-    background-color: red;
+    /* background-color: red; */
     display: inline-block;
 }
