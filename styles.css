@@ -54,15 +54,55 @@ nav ul {
     height: 50%;
     position: absolute;
     top: 30%;
-    left: 45%
+    left: 45%;
 }
 
-/* tmp style */
-
 nav li {
-    margin: 1px;
     width: 7%;
     height: 40px;
-    /* background-color: red; */
-    display: inline-block;
+}
+
+@media only screen and (min-width: 800px){
+    /* Header */
+
+    .search-btn,
+    .menu-btn {
+        display: none;
+    }
+
+    .categories-btn,
+    .search-bar,
+    .login-btn,
+    .signup-btn,
+    .lang-btn {
+        display: block;
+        position: relative;
+    }
+
+    .logo {
+        flex-grow: initial;
+        width: 10%;
+    }
+
+    .logo img {
+        left: 20%;
+    }
+
+    .categories-btn button {
+        display: block;
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+    }
+
+    .categories-btn {
+        width: 10%;
+    }
+
+    .categories-btn button:hover {
+        color:#401b9c;
+    }
 }
