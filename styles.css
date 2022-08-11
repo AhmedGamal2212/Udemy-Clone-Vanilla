@@ -26,19 +26,18 @@ nav ul {
     display: none;
 }
 
-.menu-btn {
+.menu-btn,
+.search-btn {
     position: relative;
 }
 
-.menu-btn button {
+.menu-btn button,
+.search-btn button {
     display: block;
     text-align: center;
     margin: 0 auto 0 auto;
     background-color: transparent;
     border: none;
-}
-
-.menu-btn button {
     position: absolute;
     top: 30%;
     left: 30%;
@@ -46,13 +45,21 @@ nav ul {
 
 .logo {
     flex-grow: 1;
+    position: relative;
+}
+
+.logo img {
+    height: 50%;
+    position: absolute;
+    top: 30%;
+    left: 45%
 }
 
 /* tmp style */
 
-li {
+nav li {
     margin: 1px;
-    width: 10%;
+    width: 7%;
     height: 40px;
     /* background-color: red; */
     display: inline-block;
