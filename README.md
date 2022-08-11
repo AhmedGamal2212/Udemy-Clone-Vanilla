@@ -7,7 +7,7 @@ I have already worked on the structure and basic styles of the page using ***HTM
 Currently, I'm working on:
 
 - Refactoring some parts of the code to provide better looking responsive page.
-- Adding scripts to fetch the course data froma n API and render it using JS.
+- Adding scripts to fetch the course data from an API and render it using JS.
 - Making the Search Bar usable in filtering the courses during writing parts of the name of the course.
 
 You can find the **live demo** of the current version here https://ahmedgamal2212.github.io/bld.ai-project-1/.
