@@ -6,20 +6,25 @@
 
 /* Header */
 
+header {
+    width: 100%;
+}
+
 nav {
     box-shadow: 0px 3px 5px #c3c2c2;
-    height: 4.2rem;
-    padding: 0 1rem;
+    height: 3.2rem;
+    padding: 1rem;
 }
 
 nav ul {
     height: 100%;
+    width: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .categories-btn,
@@ -55,17 +60,17 @@ li {
     display: flex;
     justify-content: center;
     min-width: auto;
-    margin: 0 1rem;
-    /* width: 25%;
-    height: 70%; */
+    margin-right: 0.7rem;
 }
 
 li button {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 2.5rem;
     font-size: 1rem;
+}
+
+button i:hover {
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 800px){
@@ -74,6 +79,10 @@ li button {
     .search-btn,
     .menu-btn {
         display: none;
+    }
+
+    nav {
+        height: 5rem;
     }
 
     .categories-btn,
@@ -91,16 +100,18 @@ li button {
     }
 
     .categories-btn button {
-        /* padding: 1rem 2rem; */
-        display: inline-block;
-        cursor: pointer;
-        background-color: transparent;
         border: none;
-        text-align: center;
+        background-color: transparent;
+        padding: 10px;
     }
 
-    .categories-btn button:hover {
+    .categories-btn button:hover,
+    .cart-btn button:hover {
         color:#401b9c;
+    }
+
+    .login-btn button:hover {
+        background-color: whitesmoke;
     }
 
     .search-bar {
@@ -127,6 +138,7 @@ li button {
     form button {
         border: none;
         background: transparent;
+        min-width: 50px;
     }
 
     input[type="text"] {
@@ -136,7 +148,67 @@ li button {
         font-size: 1rem;
     }
 
-    button:hover {
+    .login-btn button,
+    .signup-btn button {
+        background-color: transparent;
+        border: 1px solid black;
+        font-weight: bold;
+        width: 5rem;
+        font-size: 1.2rem;
+        padding: 10px;
         cursor: pointer;
+    }
+
+    .signup-btn button {
+        min-width: 6rem;
+        background-color: #000;
+        color: #fff;
+    }
+
+    .lang-btn button{
+        font-size: 1.5rem;
+        padding: 10px;
+        background-color: transparent;
+    }
+}
+
+@media only screen and (min-width: 921px){
+    .teach-on-udemy-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .teach-on-udemy-btn button {
+        background-color: transparent;
+        border: none;
+        font-size: 1rem;
+        min-width: 8rem;
+        cursor: pointer;
+    }
+
+    .teach-on-udemy-btn button:hover {
+        color: #401b9c;
+    }
+}
+
+@media only screen and (min-width: 1081px){
+    .udemy-business-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .udemy-business-btn button {
+        background-color: transparent;
+        border: none;
+        font-size: 1rem;
+        min-width: 8rem;
+        cursor: pointer;
+    }
+
+    .teach-on-udemy-btn button:hover {
+        color: #401b9c;
     }
 }
