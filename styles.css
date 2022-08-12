@@ -8,12 +8,15 @@
 
 header {
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 nav {
     box-shadow: 0px 3px 5px #c3c2c2;
     height: 3.2rem;
     padding: 1rem;
+    z-index: 2;
+    margin-bottom: 0.3rem;
 }
 
 nav ul {
@@ -71,6 +74,47 @@ li button {
 
 button i:hover {
     cursor: pointer;
+}
+
+.new-to-udemy {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbfbfb;
+}
+
+.new-to-udemy img {
+    width: 100%;
+    height: auto;
+}
+.new-to-udemy figure {
+    width: 100%;
+    height: auto;
+}
+
+.new-to-udemy article {
+    padding: 1.6rem;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 6px rgb(225, 221, 221);
+}
+
+.new-to-udemy p:first-child {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.new-to-udemy p:last-child {
+    font-weight: lighter;
+    color:dimgrey;
+    font-size: 1rem;
+}
+
+.courses-section {
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 800px){
@@ -190,6 +234,8 @@ button i:hover {
     .teach-on-udemy-btn button:hover {
         color: #401b9c;
     }
+
+    
 }
 
 @media only screen and (min-width: 1081px){
@@ -212,3 +258,31 @@ button i:hover {
         color: #401b9c;
     }
 }
+
+@media only screen and (min-width: 500px){
+    .new-to-udemy p:first-child {
+        font-size: 2.1rem;
+    }
+
+    .new-to-udemy p:last-child {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .new-to-udemy {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .new-to-udemy article,
+    .new-to-udemy figure {
+        width: 40%;
+        box-shadow: 0 0.5rem 6px rgb(225, 221, 221);
+    }
+
+    .new-to-udemy article {
+        min-height: 12rem;
+    }
+}
+
