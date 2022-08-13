@@ -87,16 +87,17 @@
         <section class="courses-section">
             <h2>A broad selection of courses</h2>
             <p>Choose from 185,000 online video courses with new additions published every month</p>
+            
             <!-- filter courses -->
-            <form action="">
-                <input type="radio" checked>
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </form>
+            <fieldset class="courses-radio">
+                <label><input type="radio" value="python" name="course-choice" checked><span>Python</span></label>
+                <label><input type="radio" value="excel" name="course-choice"><span>Excel</span></label>
+                <label><input type="radio" value="web-dev" name="course-choice"><span>Web Development</span></label>
+                <label><input type="radio" value="js" name="course-choice"><span>JavaScript</span></label>
+                <label><input type="radio" value="data-science" name="course-choice"><span>Data Science</span></label>
+                <label><input type="radio" value="aws" name="course-choice"><span>AWS Certification</span></label>
+                <label><input type="radio" value="drawing" name="course-choice"><span>Drawing</span></label>
+            </fieldset>
 
             <section class="courses-container">
                 <h2>Expand your career opportunities with Python</h2>
@@ -105,7 +106,7 @@
                     incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning.
                     You'll learn how to build everything from games to sites to apps. Choose from a range of courses that will appeal to...
                 </p>
-                <button type="button" name="explore-python-button">Explore Python</button>
+                <button type="button" class="explore-python" name="explore-python-button">Explore Python</button>
 
                 <!-- collection of courses -->
                 <section class="courses-cards">

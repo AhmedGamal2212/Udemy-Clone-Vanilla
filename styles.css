@@ -81,7 +81,7 @@ button i:hover {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    background-color: #fbfbfb;
+    background-color: #f9f9f9;
 }
 
 .new-to-udemy img {
@@ -112,9 +112,91 @@ button i:hover {
     font-size: 1rem;
 }
 
+/* Courses */
+
 .courses-section {
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+.courses-section h2 {
+    margin: 0.6rem 0;
+}
+
+.courses-section p {
+    font-size: 1.2rem;
+}
+
+.courses-radio {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border: none;
+}
+
+.courses-radio span {
+    margin-right: 0.5rem;
+    color: grey;
+    cursor: pointer;
+}
+
+.courses-radio input[type="radio"]{
+    display: none;
+}
+
+.courses-radio input[type="radio"]:checked+span {
+    color:black;
+}
+
+.courses-container {
+    border: 1px solid rgba(128, 128, 128, 50%);
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+}
+
+.explore-python {
+    margin: 2rem 0;
+    background-color: transparent;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 6px;
+    cursor: pointer;
+    width: 11rem;
+}
+
+.explore-python:hover {
+    background-color: whitesmoke;
+}
+
+@media only screen and (min-width: 500px){
+    .new-to-udemy p:first-child {
+        font-size: 2.1rem;
+    }
+
+    .new-to-udemy p:last-child {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .new-to-udemy {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .new-to-udemy article,
+    .new-to-udemy figure {
+        width: 40%;
+    }
+
+    .new-to-udemy article {
+        max-width: 35rem;
+    }
+
+    .new-to-udemy p:first-child {
+        font-size: 2rem;
+    }
 }
 
 @media only screen and (min-width: 800px){
@@ -150,7 +232,8 @@ button i:hover {
     }
 
     .categories-btn button:hover,
-    .cart-btn button:hover {
+    .cart-btn button:hover,
+    .udemy-business-btn button:hover {
         color:#401b9c;
     }
 
@@ -162,7 +245,7 @@ button i:hover {
         flex-grow: 1;
     }
 
-    form {
+    header form {
         border: 1px black solid;
         border-radius: 70px;
         background: whitesmoke;
@@ -173,19 +256,19 @@ button i:hover {
         width: 80%;
     }
 
-    form i {
+    header form i {
         display: block;
         color: grey;
         font-size: medium;
     }
 
-    form button {
+    header form button {
         border: none;
         background: transparent;
         min-width: 50px;
     }
 
-    input[type="text"] {
+    header input[type="text"] {
         outline: transparent;
         border: none;
         background-color: transparent;
@@ -213,6 +296,16 @@ button i:hover {
         font-size: 1.5rem;
         padding: 10px;
         background-color: transparent;
+    }     
+
+    /* courses section */
+
+    .courses-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .courses-section p {
+        font-size: 1.6rem;
     }
 }
 
@@ -235,7 +328,9 @@ button i:hover {
         color: #401b9c;
     }
 
-    
+    .new-to-udemy p:first-child {
+        font-size: 3rem;
+    }
 }
 
 @media only screen and (min-width: 1081px){
@@ -258,31 +353,3 @@ button i:hover {
         color: #401b9c;
     }
 }
-
-@media only screen and (min-width: 500px){
-    .new-to-udemy p:first-child {
-        font-size: 2.1rem;
-    }
-
-    .new-to-udemy p:last-child {
-        font-size: 1.6rem;
-    }
-}
-
-@media only screen and (min-width: 700px){
-    .new-to-udemy {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .new-to-udemy article,
-    .new-to-udemy figure {
-        width: 40%;
-        box-shadow: 0 0.5rem 6px rgb(225, 221, 221);
-    }
-
-    .new-to-udemy article {
-        min-height: 12rem;
-    }
-}
-
