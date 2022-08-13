@@ -169,6 +169,53 @@ button i:hover {
     background-color: whitesmoke;
 }
 
+.courses-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.course-card {
+    width: 100%;
+}
+
+.course-card figure {
+    border: 1px solid gray;
+}
+
+.course-card img {
+    display: block;
+    width: 100%;
+}
+
+.card-info {
+    padding: 0.5rem;
+}
+
+.card-info p {
+    color: rgb(103, 102, 102);
+}
+
+.rating p {
+    display: inline;
+    font-weight: bold;
+    color: rgb(223, 93, 0);
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.stars {
+    color: darkorange;
+    font-size: 1rem;
+}
+
+.card-info p:last-child {
+    color: black;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
 @media only screen and (min-width: 500px){
     .new-to-udemy p:first-child {
         font-size: 2.1rem;
@@ -196,6 +243,14 @@ button i:hover {
 
     .new-to-udemy p:first-child {
         font-size: 2rem;
+    }
+
+    .courses-container {
+        padding: 2rem;
+    }
+
+    .course-card {
+        width: 45%;
     }
 }
 
@@ -301,12 +356,11 @@ button i:hover {
     /* courses section */
 
     .courses-section h2 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
 
     .courses-section p {
         font-size: 1.6rem;
-        
     }
 }
 
@@ -332,6 +386,10 @@ button i:hover {
     .new-to-udemy p:first-child {
         font-size: 3rem;
     }
+
+    .course-card {
+        width: 30%;
+    }
 }
 
 @media only screen and (min-width: 1081px){
@@ -352,5 +410,15 @@ button i:hover {
 
     .teach-on-udemy-btn button:hover {
         color: #401b9c;
+    }
+
+    .course-card {
+        width: 22%;
+    }
+}
+
+@media only screen and (min-width: 1800px){
+    .course-card {
+        width: 17%;
     }
 }
