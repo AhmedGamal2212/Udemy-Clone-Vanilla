@@ -172,7 +172,7 @@ button i:hover {
 .courses-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-content: space-between;
 }
 
@@ -257,6 +257,7 @@ button i:hover {
 
     .course-card {
         width: 45%;
+        margin: 1rem;
     }
 }
 

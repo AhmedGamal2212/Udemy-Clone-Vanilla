@@ -122,4 +122,24 @@ const changeSection = async () => {
     }
 }
 
+function searchBar(){
+    let bar = document.querySelector('.bar');
+    let val = bar.value.toLowerCase();
+    let container = document.querySelector('.courses-cards');
+
+    for(let card of container.children){
+        card.style.display = 'block';
+    }
+
+    if(val.length){
+        for(let card of container.children){
+            let currValue = card.querySelector('.card-info').getElementsByTagName('h2')[0].innerHTML.toLowerCase();
+            if(currValue.includes(val))
+                continue;
+            card.style.display = 'none';
+        }
+    }
+
+}
+
 window.addEventListener('DOMContentLoaded', () => loadContent());
