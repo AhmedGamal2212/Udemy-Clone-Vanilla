@@ -1,6 +1,6 @@
 let files = [];
 let currSection = "";
-let host_url = 'http://localhost:3000/';
+let hostURL = 'http://localhost:3000/';
 
 const loadContent = async () => {
     files = [];
@@ -8,7 +8,7 @@ const loadContent = async () => {
     let courses_sections = ["data-science", "drawing", "aws", "excel", "js", "python", "web-dev"];
     
     for(let section of courses_sections){
-        let response = await fetch(host_url + section);
+        let response = await fetch(hostURL + section);
         files.push(await response.json());
     }
 
@@ -62,15 +62,15 @@ const loadContent = async () => {
 const changeSection = async () => {
     let input_form = [...document.querySelector('.courses-radio').children];
 
-    for(let lebel of input_form){
-        for(let child of lebel.children){
+    for(const lebel of input_form){
+        for(const child of lebel.children){
             if(child.tagName == "INPUT" && child.checked){
                 if(currSection.length == 0 || currSection != child.value){
                     if(child.value == 'all'){
                         loadContent();
                     }else{
-                        let response = await fetch(host_url + child.value);
-                        let file = await response.json();
+                        const response = await fetch(hostURL + child.value);
+                        const file = await response.json();
                         const container = document.querySelector('.courses-cards');
 
                         container.innerHTML = '';
