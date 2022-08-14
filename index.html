@@ -89,254 +89,31 @@
             
             <!-- filter courses -->
             <fieldset class="courses-radio">
-                <label><input type="radio" value="all" name="course-choice" checked><span>All</span></label>
-                <label><input type="radio" value="python" name="course-choice"><span>Python</span></label>
-                <label><input type="radio" value="excel" name="course-choice"><span>Excel</span></label>
-                <label><input type="radio" value="web-dev" name="course-choice"><span>Web Development</span></label>
-                <label><input type="radio" value="js" name="course-choice"><span>JavaScript</span></label>
-                <label><input type="radio" value="data-science" name="course-choice"><span>Data Science</span></label>
-                <label><input type="radio" value="aws" name="course-choice"><span>AWS Certification</span></label>
-                <label><input type="radio" value="drawing" name="course-choice"><span>Drawing</span></label>
+                <label><input type="radio" value="all" name="course-choice" onclick="changeSection()" checked><span>All</span></label>
+                <label><input type="radio" value="python" name="course-choice" onclick="changeSection()"><span>Python</span></label>
+                <label><input type="radio" value="excel" name="course-choice" onclick="changeSection()"><span>Excel</span></label>
+                <label><input type="radio" value="web-dev" name="course-choice" onclick="changeSection()"><span>Web Development</span></label>
+                <label><input type="radio" value="js" name="course-choice" onclick="changeSection()"><span>JavaScript</span></label>
+                <label><input type="radio" value="data-science" name="course-choice" onclick="changeSection()"><span>Data Science</span></label>
+                <label><input type="radio" value="aws" name="course-choice" onclick="changeSection()"><span>AWS Certification</span></label>
+                <label><input type="radio" value="drawing" name="course-choice" onclick="changeSection()"><span>Drawing</span></label>
             </fieldset>
 
             <section class="courses-container">
-                <h2>Expand your career opportunities with Python</h2>
-                <p>
-                    Take one of Udemy's range of Python courses and learn how to code using this
-                    incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning.
-                    You'll learn how to build everything from games to sites to apps. Choose from a range of courses that will appeal to...
-                </p>
-                <button type="button" class="explore-python" name="explore-python-button">Explore Python</button>
+
+                <h2 class="section-header"></h2>
+                <p class="section-description"></p>
+                <button type="button" class="explore" name="explore-python-button"></button>
 
                 <!-- collection of courses -->
-                <!-- course #1 -->
                 <section class="courses-cards">
-                    <article class="course-card">
-                       <!-- course image -->
-                        <figure>
-                            <img src="materials/pythoncourseimg1.jpg" alt="python course 1">
-                        </figure>
-                        <!-- course info -->
-                       <section class="card-info">
-                            <!-- course title -->
-                            <h2>Learning Python for Data Analysis and Visualization</h2>
 
-                            <!-- author -->
-                            <p>Jose Portilla</p>
-
-                            <!-- rating -->
-                            <section class="rating">
-                                <p>4.4</p>
-                                <i class="fa-solid fa-star stars"></i>
-                                <i class="fa-solid fa-star stars"></i>
-                                <i class="fa-solid fa-star stars"></i>
-                                <i class="fa-solid fa-star stars"></i>
-                                <i class="fa-regular fa-star-half-stroke stars"></i>
-                            </section>
-                            <!-- price -->
-                            <p class="price">E£1,599.99</p>
-                       </section>
-                    </article>
-                
-                    <!-- course #2 -->
-                    <article class="course-card">
-                        <!-- course image -->
-                         <figure>
-                             <img src="materials/pythoncourseimg2.jpg" alt="python course 2">
-                         </figure>
-                         <!-- course info -->
-                        <section class="card-info">
-                             <!-- course title -->
-                             <h2>Python for Beginners - Learn Programming from scratch</h2>
- 
-                             <!-- author -->
-                             <p>Edwin Diaz, Coding Fraculty Solutions</p>
- 
-                             <!-- rating -->
-                             <section class="rating">
-                                 <p>4.4</p>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-regular fa-star-half-stroke stars"></i>
-                             </section>
-                             <!-- price -->
-                             <p class="price">E£679.99</p>
-                        </section>
-                     </article>
-
-                     <!-- course #3 -->
-                     <article class="course-card">
-                        <!-- course image -->
-                         <figure>
-                             <img src="materials/excelcourseimg1.jpg" alt="excel course 1">
-                         </figure>
-                         <!-- course info -->
-                        <section class="card-info">
-                             <!-- course title -->
-                             <h2>Microsoft Excel 2013 Course Beginners/intermediate Training</h2>
- 
-                             <!-- author -->
-                             <p>Infinite Skills</p>
- 
-                             <!-- rating -->
-                             <section class="rating">
-                                 <p>4.6</p>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-regular fa-star-half-stroke stars"></i>
-                             </section>
-                             <!-- price -->
-                             <p class="price">E£519.99</p>
-                        </section>
-                     </article>
-
-                     <!-- course #4 -->
-                     <article class="course-card">
-                        <!-- course image -->
-                         <figure>
-                             <img src="materials/webcourseimg1.jpg" alt="web development course 1">
-                         </figure>
-                         <!-- course info -->
-                        <section class="card-info">
-                             <!-- course title -->
-                             <h2>Ultimate Web Designer & Web Developer Course</h2>
- 
-                             <!-- author -->
-                             <p>Brad hussey</p>
- 
-                             <!-- rating -->
-                             <section class="rating">
-                                 <p>4.6</p>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-regular fa-star-half-stroke stars"></i>
-                             </section>
-                             <!-- price -->
-                             <p class="price">E£1,699.99</p>
-                        </section>
-                     </article>
-
-
-                     <!-- course #5 -->
-                     <article class="course-card">
-                        <!-- course image -->
-                         <figure>
-                             <img src="materials/javascriptcourseimg1.jpg" alt="javascript course 1">
-                         </figure>
-                         <!-- course info -->
-                        <section class="card-info">
-                             <!-- course title -->
-                             <h2>JavaScript from Beginner to Expert</h2>
- 
-                             <!-- author -->
-                             <p>Arkadiusz Wlodarczyk</p>
- 
-                             <!-- rating -->
-                             <section class="rating">
-                                 <p>4.3</p>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-regular fa-star-half-stroke stars"></i>
-                             </section>
-                             <!-- price -->
-                             <p class="price">E£829.99</p>
-                        </section>
-                     </article>
-
-                     <!-- course #6 -->
-                     <article class="course-card">
-                        <!-- course image -->
-                         <figure>
-                             <img src="materials/datasciencecourseimg1.jpg" alt="data science course 1">
-                         </figure>
-                         <!-- course info -->
-                        <section class="card-info">
-                             <!-- course title -->
-                             <h2>R Programming A-Z<sup>TM</sup>:R For Data Science With Real Excercises</h2>
- 
-                             <!-- author -->
-                             <p>kirill Eremenko, Ligency I Team</p>
- 
-                             <!-- rating -->
-                             <section class="rating">
-                                 <p>4.7</p>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-regular fa-star-half-stroke stars"></i>
-                             </section>
-                             <!-- price -->
-                             <p class="price">E£1,399.99</p>
-                        </section>
-                     </article>
-
-                     <!-- course #7 -->
-                     <article class="course-card">
-                        <!-- course image -->
-                         <figure>
-                             <img src="materials/awscourseimg1.jpg" alt="aws certification course 1">
-                         </figure>
-                         <!-- course info -->
-                        <section class="card-info">
-                             <!-- course title -->
-                             <h2>Amazon Web Services (AWS) Certified 2022 - 4 Certifications!</h2>
- 
-                             <!-- author -->
-                             <p>BlackSpace Academy, Paul Coady</p>
- 
-                             <!-- rating -->
-                             <section class="rating">
-                                 <p>4.5</p>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-regular fa-star-half-stroke stars"></i>
-                             </section>
-                             <!-- price -->
-                             <p class="price">E£1,299.99</p>
-                        </section>
-                     </article>
-
-                     <!-- course #8 -->
-                     <article class="course-card">
-                        <!-- course image -->
-                         <figure>
-                             <img src="materials/drawingcourseimg1.jpg" alt="data science course 1">
-                         </figure>
-                         <!-- course info -->
-                        <section class="card-info">
-                             <!-- course title -->
-                             <h2>The Ultimate Drawing Course - Beginner to Advanced</h2>
- 
-                             <!-- author -->
-                             <p>Jaysen Batchelor, Quinton Batchelor</p>
- 
-                             <!-- rating -->
-                             <section class="rating">
-                                 <p>4.6</p>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-solid fa-star stars"></i>
-                                 <i class="fa-regular fa-star-half-stroke stars"></i>
-                             </section>
-                             <!-- price -->
-                             <p class="price">E£829.99</p>
-                        </section>
-                     </article>
                 </section>
+
             </section>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
