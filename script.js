@@ -15,10 +15,10 @@ const loadContent = async () => {
     loadCourses(coursesSections, container);
 } 
 
-function loadCourses(coursesSection, container){
+function loadCourses(coursesSections, container){
     container.innerHTML = '';
 
-    for(let file of coursesSection){
+    for(let file of coursesSections){
         files['record'][file].courses.forEach(element => {
             let inst = '';
 
@@ -29,7 +29,7 @@ function loadCourses(coursesSection, container){
             inst = inst.slice(0, -1);
 
             const child = `
-            <article class="course-card">
+            <article class="course-card ${file}-course">
             <!-- course image -->
             <figure>
                 <img src="${element.image}">
@@ -59,25 +59,36 @@ function loadCourses(coursesSection, container){
             container.innerHTML += child;
         });
     }
+
+    showCards('python');
 }
 
+function showCards(category){
+    let cards = document.querySelectorAll('.course-card');
+
+    cards.forEach(card => {
+        card.style.display = 'none';
+    });
+
+    cards = document.querySelectorAll(`.${category}-course`);
+    
+    cards.forEach(card => {
+        card.style.display = 'block';
+    });
+}
 
 // TODO: add the title and description when changing the section of the courses
 
 const changeSection = async () => {
-    let inputForm = [...document.querySelector('.courses-radio').children];
-    let coursesSections = ["data-science", "drawing", "aws", "excel", "js", "python", "web-dev"]
+    const inputForm = [...document.querySelector('.courses-radio').children];
+    const coursesSections = ["data-science", "drawing", "aws", "excel", "js", "python", "web-dev"]
     const container = document.querySelector('.courses-cards');
 
     for(const lebel of inputForm){
         for(const child of lebel.children){
             if(child.tagName == "INPUT" && child.checked){
                 if(currSection.length == 0 || currSection != child.value){
-                    if(child.value == 'all'){
-                        loadCourses(coursesSections, container);
-                    }else{
-                        loadCourses([child.value], container);
-                    }
+                    showCards(child.value);
                     currSection = child.value;
                 }
             }
@@ -86,9 +97,9 @@ const changeSection = async () => {
 }
 
 function searchBar(){
-    let bar = document.querySelector('.bar');
-    let val = bar.value.toLowerCase();
-    let container = document.querySelector('.courses-cards');
+    const bar = document.querySelector('.bar');
+    const val = bar.value.toLowerCase();
+    const container = document.querySelector('.courses-cards');
 
     for(let card of container.children){
         card.style.display = 'block';
@@ -96,7 +107,7 @@ function searchBar(){
 
     if(val.length){
         for(let card of container.children){
-            let currValue = card.querySelector('.card-info').getElementsByTagName('h2')[0].innerHTML.toLowerCase();
+            const currValue = card.querySelector('.card-info').getElementsByTagName('h2')[0].innerHTML.toLowerCase();
             if(currValue.includes(val))
                 continue;
             card.style.display = 'none';

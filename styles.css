@@ -63,7 +63,7 @@ li {
     display: flex;
     justify-content: center;
     min-width: auto;
-    margin-right: 0.7rem;
+    padding: 1rem;
 }
 
 li button {
@@ -74,6 +74,10 @@ li button {
 
 button i:hover {
     cursor: pointer;
+}
+
+.cart-btn i{
+    font-size: 1.5rem;
 }
 
 .new-to-udemy {
@@ -119,6 +123,10 @@ button i:hover {
     font-size: 1rem;
 }
 
+.courses-section .courses-radio span:hover {
+    color: black;
+}
+
 .courses-section h2 {
     margin: 0.6rem 0;
 }
@@ -135,7 +143,7 @@ button i:hover {
 }
 
 .courses-radio span {
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     color: grey;
     cursor: pointer;
 }
@@ -172,8 +180,7 @@ button i:hover {
 .courses-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: space-between;
+    justify-content: center;
 }
 
 .section-header,
@@ -184,6 +191,11 @@ button i:hover {
 
 .course-card {
     width: 100%;
+    padding: 0.5rem;
+}
+
+.course-card:hover {
+    background-color: whitesmoke;
 }
 
 .course-card figure {
@@ -256,8 +268,7 @@ button i:hover {
     }
 
     .course-card {
-        width: 45%;
-        margin: 1rem;
+        width: 50%;
     }
 }
 
@@ -395,7 +406,7 @@ button i:hover {
     }
 
     .course-card {
-        width: 29%;
+        width: 33%;
     }
 }
 
@@ -420,12 +431,12 @@ button i:hover {
     }
 
     .course-card {
-        width: 22%;
+        width: 25%;
     }
 }
 
 @media only screen and (min-width: 1800px){
     .course-card {
-        width: 17%;
+        width: 20%;
     }
 }
