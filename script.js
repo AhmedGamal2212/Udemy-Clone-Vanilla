@@ -64,6 +64,26 @@ function loadCourses(coursesSections, container){
 }
 
 function showCards(category){
+
+    const buttonValue = {
+        'python':'Python',
+        'drawing': 'Drawing',
+        'aws': 'AWS Certification',
+        'excel': 'Excel',
+        'js': 'JavaScript',
+        'data-science': 'Data Science',
+        'web-dev': 'Web Development'
+    }
+
+    const title = document.querySelector('.courses-section-header');
+    title.innerHTML = files['record'][category]['header'];
+
+    const description = document.querySelector('.courses-section-description');
+    description.innerHTML = files['record'][category]['description'];
+
+    const exploreButton = document.querySelector('.explore');
+    exploreButton.innerHTML = 'Explore ' + buttonValue[category];
+
     let cards = document.querySelectorAll('.course-card');
 
     cards.forEach(card => {

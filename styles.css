@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body {
+    font-family: sans-serif;
+}
+
 /* Header */
 
 header {
@@ -40,6 +44,10 @@ nav ul {
     display: none;
 }
 
+.search-bar {
+    min-width: 20rem;
+}
+
 .menu-btn button,
 .search-btn button,
 .cart-btn button {
@@ -63,7 +71,7 @@ li {
     display: flex;
     justify-content: center;
     min-width: auto;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 li button {
@@ -168,9 +176,9 @@ button i:hover {
     border: 1px solid black;
     font-weight: bold;
     font-size: 1.2rem;
-    padding: 6px;
+    padding: 1rem;
     cursor: pointer;
-    width: 11rem;
+    width: fit-content;
 }
 
 .explore:hover {
@@ -184,8 +192,7 @@ button i:hover {
 }
 
 .section-header,
-.section-description,
-.explore {
+.section-description {
     display: none;
 }
 
