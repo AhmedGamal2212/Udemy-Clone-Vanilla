@@ -84,8 +84,8 @@ button i:hover {
     cursor: pointer;
 }
 
-.cart-btn i{
-    font-size: 1.5rem;
+.cart-btn i {
+    font-size: 1.2rem;
 }
 
 .new-to-udemy {
@@ -390,6 +390,11 @@ button i:hover {
 }
 
 @media only screen and (min-width: 921px){
+    
+    .cart-btn i {
+        font-size: 1.5rem;
+    }
+    
     .teach-on-udemy-btn {
         display: flex;
         justify-content: center;
