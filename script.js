@@ -97,8 +97,6 @@ function showCards(category){
     });
 }
 
-// TODO: add the title and description when changing the section of the courses
-
 const changeSection = async () => {
     const inputForm = [...document.querySelector('.courses-radio').children];
     const coursesSections = ["data-science", "drawing", "aws", "excel", "js", "python", "web-dev"]

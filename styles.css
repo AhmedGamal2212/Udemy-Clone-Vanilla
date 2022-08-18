@@ -196,10 +196,10 @@ button i:hover {
     display: none;
 }
 
-.course-card {
+/* .course-card {
     width: 100%;
     padding: 0.5rem;
-}
+} */
 
 .course-card:hover {
     background-color: whitesmoke;
@@ -241,6 +241,60 @@ button i:hover {
     font-size: 1.6rem;
 }
 
+.carousel-inner {
+    padding: 1em;
+    display: flex;
+}
+.card {
+    margin: 0 .5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+}
+.carousel-control-prev, .carousel-control-next{
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+}
+
+.top-categories-container {
+    padding: 1rem;
+}
+
+/* .top-categories-container h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+} */
+/* 
+.top-categories-wrapper {
+    padding: 1rem;
+} */
+
+.top-categories-wrapper {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.top-categories-wrapper figure {
+    padding: 0.5rem;
+}
+
+.top-categories-wrapper figure img {
+    transition-duration: 0.3s;
+}
+
+.top-categories-wrapper figure img:hover {
+    transform: scale(1.05);
+}
+
+
+.top-categories-wrapper figcaption {
+    margin-top: 0.5rem;
+}
+
 @media only screen and (min-width: 500px){
     .new-to-udemy p:first-child {
         font-size: 2.1rem;
@@ -274,9 +328,11 @@ button i:hover {
         padding: 2rem;
     }
 
-    .course-card {
+    /* .course-card {
         width: 50%;
-    }
+    } */
+
+    
 }
 
 @media only screen and (min-width: 800px){

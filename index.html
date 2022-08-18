@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- linking style sheets -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="styles.css">
+    
+
 
     <!-- title -->
     <title>Udemy Simulation</title>
@@ -83,7 +86,7 @@
     <!-- main content -->
     <main>
         <!-- courses explore -->
-        <section class="courses-section">
+        <section style="display:none" class="courses-section">
             <h2>A broad selection of courses</h2>
             <p>Choose from 185,000 online video courses with new additions published every month</p>
             
@@ -106,12 +109,145 @@
 
                 <!-- collection of courses -->
                 <section class="courses-cards">
+                    
                 </section>
-
+               
             </section>
         </section>
+        <section style="width:50%" class="container-fluid">
+        <section id="carousel-controls" class="carousel" data-bs-ride="carousel">
+            <section class="carousel-inner">
+                <article class="carousel-item active">
+                    <div class="card">
+                        <img src="materials/awscourseimg1.jpg" class="d-block w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="carousel-item">
+                    <div class="card">
+                        <img src="materials/excelcourseimg1.jpg" class="d-block w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="carousel-item">
+                    <div class="card">
+                        <img src="materials/webcourseimg1.jpg" class="d-block w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="carousel-item">
+                    <div class="card">
+                        <img src="materials/webcourseimg1.jpg" class="d-block w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="carousel-item">
+                    <div class="card">
+                        <img src="materials/webcourseimg1.jpg" class="d-block w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="carousel-item">
+                    <div class="card">
+                        <img src="materials/webcourseimg1.jpg" class="d-block w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-controls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-controls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+    </section>
+
+
+    <section class="top-categories-container">
+        <h2 class="">
+            Top Categories
+        </h2>
+        <section class="container-fluid top-categories-wrapper">
+            <div class="row">
+                <figure class="col-12 col-md-4 col-lg-3">
+                    <div class="img-wrapper">
+                        <img src="materials/topcategoriesdesign.jpg" alt="" class="d-block w-100">
+                    </div>
+                    <figcaption>Design</figcaption>
+                </figure>
+
+                <figure class="col-12 col-md-4 col-lg-3">
+                    <img src="materials/topcategoriesdevelopment.jpg" alt="" class="d-block w-100">
+                    <figcaption">Development</figcaption>
+                </figure>
+                <figure class="col-12 col-md-4 col-lg-3">
+                    <img src="materials/topcategoriesmarketing.jpg" alt="" class="d-block w-100">
+                    <figcaption>Marketing</figcaption>
+                </figure>
+                <figure class="col-12 col-md-4 col-lg-3">
+                    <img src="materials/topcategoriesitandsoftware.jpg" alt="" class="d-block w-100">
+                    <figcaption>IT and Software</figcaption>
+                </figure>
+                <figure class="col-12 col-md-4 col-lg-3">
+                    <img src="materials/topcategoriespersonaldevelopment.jpg" alt="" class="d-block w-100">
+                    <figcaption>Personal Development</figcaption>
+                </figure>
+                <figure class="col-12 col-md-4 col-lg-3">
+                    <img src="materials/topcategoriesbusiness.jpg" alt="" class="d-block w-100">
+                    <figcaption>Business</figcaption>
+                </figure>
+                <figure class="col-12 col-md-4 col-lg-3">
+                    <img src="materials/topcategoriesphotography.jpg" alt="" class="d-block w-100">
+                    <figcaption>Photography</figcaption>
+                </figure>
+                <figure class="col-12 col-md-4 col-lg-3">
+                    <img src="materials/topcategoriesmusic.jpg" alt="" class="d-block w-100">
+                    <figcaption>Music</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </section>
+
     </main>
 
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
