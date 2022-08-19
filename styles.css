@@ -131,6 +131,11 @@ button i:hover {
     font-size: 1rem;
 }
 
+.courses-section-title {
+    font-weight: bold;
+    font-size: 1.8rem !important;
+}
+
 .courses-section .courses-radio span:hover {
     color: black;
 }
@@ -141,6 +146,11 @@ button i:hover {
 
 .courses-section p {
     font-size: 1.2rem;
+}
+
+.courses-section-header {
+    font-weight: bold;
+    margin-bottom: 1rem !important;
 }
 
 .courses-radio {
@@ -185,44 +195,35 @@ button i:hover {
     background-color: whitesmoke;
 }
 
-.courses-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .section-header,
 .section-description {
     display: none;
 }
 
-/* .course-card {
-    width: 100%;
-    padding: 0.5rem;
-} */
-
-.course-card:hover {
-    background-color: whitesmoke;
+.card {
+    border: none;
 }
 
-.course-card figure {
-    border: 1px solid gray;
-}
-
-.course-card img {
-    display: block;
-    width: 100%;
-}
-
-.card-info {
+.card-body {
     padding: 0.5rem;
 }
 
-.card-info p {
-    color: rgb(103, 102, 102);
+.card-body .course-title {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.rating p {
+.card-body .course-instructors {
+    color: grey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.course-rating-container .course-rating {
     display: inline;
     font-weight: bold;
     color: rgb(223, 93, 0);
@@ -235,43 +236,32 @@ button i:hover {
     font-size: 1rem;
 }
 
-.card-info p:last-child {
-    color: black;
+.course-price {
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.5rem !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    background-color: black;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: larger;
+    top: 40%;
 }
 
 .carousel-inner {
     padding: 1em;
-    display: flex;
-}
-.card {
-    margin: 0 .5em;
-    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-    border: none;
-}
-.carousel-control-prev, .carousel-control-next{
-    background-color: #e1e1e1;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
 }
 
 .top-categories-container {
     padding: 1rem;
 }
 
-/* .top-categories-container h2 {
+.top-categories-title {
     font-weight: bold;
-    font-size: 2.5rem;
-} */
-/* 
-.top-categories-wrapper {
-    padding: 1rem;
-} */
+}
 
 .top-categories-wrapper {
     font-size: 1.3rem;
@@ -324,15 +314,49 @@ button i:hover {
         font-size: 2rem;
     }
 
+    .courses-section-title {
+        font-size: 2.5rem !important;
+    }
+
     .courses-container {
         padding: 2rem;
     }
 
-    /* .course-card {
-        width: 50%;
-    } */
+    .courses-section {
+        padding: 2rem;
+    }
 
+    .courses-section-header {
+        font-size: 2rem !important;
+    }
+
+    .card-body .course-title {
+        font-size: 2rem;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .card-body .course-instructors {
+        font-size: 1.5rem;
+    }
+
+    .course-rating-container .course-rating {
+        font-size: 2rem;
+    }
+
+    .stars {
+        font-size: 1.5rem;
+    }
     
+    .course-price {
+        font-size: 2.5rem !important;
+    }
+
+
 }
 
 @media only screen and (min-width: 800px){
@@ -443,6 +467,7 @@ button i:hover {
     .courses-section p {
         font-size: 1.6rem;
     }
+
 }
 
 @media only screen and (min-width: 921px){
@@ -473,8 +498,32 @@ button i:hover {
         font-size: 3rem;
     }
 
-    .course-card {
-        width: 33%;
+    .courses-section-title {
+        font-size: 3rem !important;
+    }
+
+    .card-body .course-title {
+        font-size: 2.5rem;
+    }
+
+    .card-body .course-instructors {
+        font-size: 2rem;
+    }
+
+    .course-rating-container .course-rating {
+        font-size: 2.5rem;
+    }
+
+    .stars {
+        font-size: 2rem;
+    }
+    
+    .course-price {
+        font-size: 3rem !important;
+    }
+
+    .card-body {
+        padding: 1rem;
     }
 }
 
@@ -498,13 +547,11 @@ button i:hover {
         color: #401b9c;
     }
 
-    .course-card {
-        width: 25%;
+    .courses-section-header {
+        font-size: 2.5rem !important;
     }
 }
 
 @media only screen and (min-width: 1800px){
-    .course-card {
-        width: 20%;
-    }
+    
 }
