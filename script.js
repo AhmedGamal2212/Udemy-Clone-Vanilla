@@ -8,7 +8,6 @@ const loadCourses = async () => {
         for(const section of coursesSections){
             sectionObject[section] = jsonFile['record'][section];
         }
-        
         changeSection(false);
     });
 }
@@ -16,9 +15,7 @@ const loadCourses = async () => {
 function changeSection(resize){
     const inputForm = [...document.querySelector('.courses-radio').children];
     const searchBarValue = document.querySelector('.bar').value.toLowerCase();
-
     let section = '';
-
     let coursesToLoad = [];
     for(const label of inputForm){
         for(const child of label.children){
@@ -26,46 +23,33 @@ function changeSection(resize){
                 coursesToLoad = sectionObject[child.value]['courses'].filter((course) => {
                     return course['title'].toLowerCase().includes(searchBarValue);
                 });
-
                 section = child.value;
             }
         }
     }
-
     if(lastSearchedWord == searchBarValue && currentSection == section && !resize)
         return;
-
-
     changeSectionHeader(section);
-
     currentSection = section;
     lastSearchedWord = searchBarValue;
-
-
     const carousel = document.querySelector('#coursesCarousel .carousel-inner');
     carousel.innerHTML = '';
-
     const coursesRows = createRows(coursesToLoad);
-
     carousel.innerHTML += coursesRows;
 }
 
 function createRows(coursesToLoad){
     if(!coursesToLoad.length)
         return ``;
-
     const numberOfRows = Math.ceil(coursesToLoad.length / coursesPerRow);
-
     let coursesRows = ``;
     let currentCourse = 0;
-
     for(let rowIndex = 0; rowIndex < numberOfRows; rowIndex++){
         let row = ``;
         for(let courseIndex = currentCourse; courseIndex < Math.min(coursesToLoad.length, currentCourse + coursesPerRow); courseIndex++){
             row += createCourse(coursesToLoad[courseIndex]);
         }
         currentCourse += coursesPerRow;
-        
         coursesRows += `
         <div class="carousel-item`;
         if(!rowIndex){
@@ -80,20 +64,15 @@ function createRows(coursesToLoad){
             </div>
         </div>`;
     }
-
     return coursesRows;
 }
 
 function createCourse(course){
-
     let instructors = ``;
-
     course['instructors'].forEach((instructor) => {
         instructors += ' ' + instructor['name'] + ',';
     });
-
     instructors = instructors.slice(0, -1);
-
     return `
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex align-items-stretch">
         <article class="card h-100 d-inline-block shadow">
@@ -121,35 +100,29 @@ function createCourse(course){
     `
 }
 
-
 function getRating(rating){
-
     let courseRating = ``, star = 0;
     for(star = 0; star < Math.floor(rating); star++){
         courseRating += `
             <i class="fa-solid fa-star stars"></i>
         `;
     }
-    
     if(!Number.isInteger(rating)){
         star++;
         courseRating += `
             <i class="stars fa-regular fa-star-half-stroke"></i>
         `;
     }
-
     while(star < rating){
         star++;
         courseRating += `
         <i class="fa-light fa-star"></i>
         `
     }
-
     return courseRating;
 }
 
 function changeSectionHeader(section){
-
     const buttonValue = {
         'python':'Python',
         'drawing': 'Drawing',
@@ -159,22 +132,16 @@ function changeSectionHeader(section){
         'data-science': 'Data Science',
         'web-dev': 'Web Development'
     }
-
     const header = document.querySelector('.courses-section-header');
     header.innerHTML = sectionObject[section].header;
-
-
     const description = document.querySelector('.courses-section-description');
     description.innerHTML = sectionObject[section].description;
-
     const exploreButton = document.querySelector('.explore');
     exploreButton.innerHTML = 'Explore ' + buttonValue[section];
-
 }
 
 function checkMediaQuery(){
     let result = 1;
-
     if(window.matchMedia('(min-width: 1200px)').matches){
         result = 4;
     }else if(window.matchMedia('(min-width: 991px)').matches){
@@ -182,7 +149,6 @@ function checkMediaQuery(){
     }else if(window.matchMedia('(min-width: 768px)').matches){
         result = 2;
     } 
-
     return result;
 }
 
@@ -200,4 +166,3 @@ window.addEventListener('resize', () => {
         console.log('changed')
     }
 });
-
