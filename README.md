@@ -2,7 +2,7 @@
 This is my first project for ***bld.ai*** summer internship's front-end course, and it's a simulation for ***Udemy***'s home page.
 
 The project is completed.
-I have already worked on the structure and basic styles of the page using ***HTML5*** & ***CSS3***. Also, I am applying here what I newly learn, so it will be under development as long as I learn new front-end stuff. 
+I used HTML5 and CSS in building the structure and applying some basic styles, Vanilla JavaScript to fetch courses data from an API, manipulate search bar form, creating courses cards, and applying media queries to carousel, and I finally used Bootstrap in styling cards and layout them using Bootstrap grid system, and creating the carousel.
 
 Phases that the project passed by:
 - Phase #1:
