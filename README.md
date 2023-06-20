@@ -1,4 +1,4 @@
-# bld.ai-project-1
+# Udemy-Clone-Vanilla
 This is my first project for ***bld.ai*** summer internship's front-end course, and it's a simulation for ***Udemy***'s home page.
 
 The project is completed.
