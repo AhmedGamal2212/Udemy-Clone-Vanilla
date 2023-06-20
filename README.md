@@ -18,4 +18,4 @@ Phases that the project passed by:
   - Using Bootstrap grid to layout courses in the carousel
   - Using Bootstrap to style cards and courses in the carousel
 
-You can find the **live demo** of the final version here [https://ahmedgamal2212.github.io/bld.ai-project-1/](https://ahmedgamal2212.github.io/Udemy-Clone-Vanilla/).
+You can find the **live demo** of the final version here https://ahmedgamal2212.github.io/Udemy-Clone-Vanilla/.
